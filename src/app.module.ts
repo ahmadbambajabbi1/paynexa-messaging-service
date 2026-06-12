@@ -4,7 +4,9 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { MessagingEventsListener } from './infrastructure/events/messaging-events.listener';
+import { PushEventsListener } from './infrastructure/events/push-events.listener';
 import { RabbitmqModule } from './infrastructure/rabbitmq/rabbitmq.module';
+import { PushNotificationsService } from './push/push-notifications.service';
 import { ChatRoom, ChatRoomSchema } from './schemas/chat-room.schema';
 import { Message, MessageSchema } from './schemas/message.schema';
 
@@ -26,6 +28,6 @@ import { Message, MessageSchema } from './schemas/message.schema';
     RabbitmqModule,
   ],
   controllers: [AppController],
-  providers: [AppService, MessagingEventsListener],
+  providers: [AppService, MessagingEventsListener, PushNotificationsService, PushEventsListener],
 })
 export class AppModule {}

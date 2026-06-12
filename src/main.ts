@@ -3,6 +3,9 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  await app.listen(process.env.PORT ?? 5004, '::');
+  const port = process.env.PORT ?? 5004;
+  await app.listen(port, '::');
+  // eslint-disable-next-line no-console
+  console.log(`messaging-service listening on port ${port}`);
 }
 bootstrap();
