@@ -36,7 +36,7 @@ lerna-debug.log*
 !.vscode/extensions.json
 
 # Firebase service account (never commit)
-# firebase-service-account.json
+firebase-service-account.json
 
 # dotenv environment variable files
 .env
