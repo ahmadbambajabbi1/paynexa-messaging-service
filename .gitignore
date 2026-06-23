@@ -37,6 +37,7 @@ lerna-debug.log*
 
 # Firebase service account (never commit)
 firebase-service-account.json
+paynexa-fc9ca-firebase-adminsdk-fbsvc-71ebee51a3.json
 
 # dotenv environment variable files
 .env
